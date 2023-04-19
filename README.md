@@ -20,4 +20,7 @@
 - Generic adapter for recycler view
 
 <img src="https://user-images.githubusercontent.com/96268732/233088307-3b978441-04cc-465a-bdfd-c97cfe2b0d40.png" alt="teste" height="200"/>
-
+<img src="https://user-images.githubusercontent.com/96268732/233088330-20d64895-ce00-4617-b763-9ff03e8e29e2.png" alt="teste" height="200"/>
+<img src="https://user-images.githubusercontent.com/96268732/233088340-26af41cd-ba89-47b6-8d8f-0be1e427cd60.png" alt="teste" height="200"/>
+<img src="https://user-images.githubusercontent.com/96268732/233088343-1f7b0a16-0ede-4af0-aa3f-1495e7016bad.png" alt="teste" height="200"/>
+<img src="https://user-images.githubusercontent.com/96268732/233088351-a9dd3dae-8db2-4a3f-ae98-07a8e747aaaf.png" alt="teste" height="200"/>
