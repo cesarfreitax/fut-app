@@ -1,4 +1,4 @@
-## App MNExpedições
+## Fut app
 
 ### Overview:
 * Fut is the ultimate app for football fans. With a sleek and user-friendly interface, Fut offers a comprehensive set of features that cover all aspects of the beautiful game.*
