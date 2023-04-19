@@ -1,7 +1,7 @@
 ## Fut app
 
 ### Overview:
-* Fut is the ultimate app for football fans. With a sleek and user-friendly interface, Fut offers a comprehensive set of features that cover all aspects of the beautiful game.*
+* Fut is the ultimate app for football fans. With a sleek and user-friendly interface, Fut offers a comprehensive set of features that cover all aspects of the beautiful game.
 
 ### Features:
 - Customizable Account: Personalize your account by selecting your favorite team and leagues to receive customized news and updates.
