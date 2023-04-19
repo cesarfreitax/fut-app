@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="pageMargin">5dp</dimen>
+    <dimen name="offset">10dp</dimen>
+    <dimen name="pageMarginAndOffset">15dp</dimen>
+
+    <dimen name="textsize_cell_title">@dimen/textsize_medium</dimen>
+    <dimen name="textsize_cell_subtitle">@dimen/textsize_small</dimen>
+
+     <!-- Margin -->
+    <dimen name="margin_smallx">8dp</dimen>
+    <dimen name="margin_small">16dp</dimen>
+    <dimen name="margin_medium">24dp</dimen>
+    <dimen name="margin_largex">32dp</dimen>
+
+    <!--  Text size  -->
+    <dimen name="textsize_ulta_large">40sp</dimen>
+    <dimen name="textsize_largexxl">24sp</dimen>
+    <dimen name="textsize_largexl">22sp</dimen>
+    <dimen name="textsize_largex">20sp</dimen>
+    <dimen name="textsize_large">18sp</dimen>
+    <dimen name="textsize_medium">16sp</dimen>
+    <dimen name="textsize_xxmedium">14sp</dimen>
+    <dimen name="textsize_small">13sp</dimen>
+    <dimen name="textsize_xlsmall">12sp</dimen>
+    <dimen name="textsize_xsmall">11sp</dimen>
+    <dimen name="textsize_xxsmall">10sp</dimen>
+
+    <dimen name="letter_alternative_shape_size">50dp</dimen>
+
+    <!-- Highlight -->
+    <dimen name="highlight_class_cell_height">138dp</dimen>
+
+    <!-- Playlist Performance -->
+    <dimen name="playlist_performance_info_card_not_expanded_height">72dp</dimen>
+    <dimen name="playlist_performance_info_card_expanded_height">220dp</dimen>
+</resources>

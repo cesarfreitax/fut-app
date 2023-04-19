@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/highlights"
+        android:icon="@drawable/ic_newspaper_24"
+        android:title="Destaques"/>
+
+    <item android:id="@+id/matches"
+        android:icon="@drawable/ic_soccer_ball_24"
+        android:title="Jogos"/>
+
+    <item android:id="@+id/search"
+        android:icon="@drawable/ic_search_24"
+        android:title="Pesquisar"/>
+
+    <item android:id="@+id/profile"
+        android:icon="@drawable/ic_person_24"
+        android:title="Perfil"/>
+
+</menu>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardBackgroundColor="@color/dark_container"
+    android:layout_marginTop="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp">
+
+        <TextView
+            android:id="@+id/txt_news_title"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@id/img_news"
+            app:layout_constraintBottom_toBottomOf="@id/img_news"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/img_news"
+            tools:text="Fluminense é campeão do Campeonato Carioca ganhando de lavada do Flamengo."
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_bold"/>
+
+        <TextView
+            android:id="@+id/txt_news_subtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/txt_news_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="O time jogou com muita garra e dominou a partida desde o início, trazendo o bicampeonato para a torcida tricolor."
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/white"/>
+
+        <ImageView
+            android:id="@+id/img_news"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@drawable/news_example"
+            android:contentDescription="@string/highlights_news_image" />
+
+        <TextView
+            android:id="@+id/txt_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_news_subtitle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="8dp"
+            tools:text="12/04/2023"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_extra_light"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

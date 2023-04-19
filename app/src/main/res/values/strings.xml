@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Fut</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--  Search  -->
+    <string name="search_error_searching_teams">Erro ao buscar os times.</string>
+
+    <!--  Matches  -->
+    <string name="matches_error_searching_games">Erro ao buscar os jogos.</string>
+    <string name="matches_game_date">%s/%s</string>
+    <string name="matches_game_hour">%s:%s</string>
+    <string name="matches_title_games">Jogos</string>
+
+    <!--  User Start Preferences  -->
+    <string name="userstartpreferences_choose_country_title">Escolha o país do seu time</string>
+    <string name="userstartpreferences_choose_team_title">Escolha o seu time de coração</string>
+    <string name="userstartpreferences_choose_league_title">Escolha as ligas que você gostaria de acompanhar</string>
+    <string name="userstartpreferences_choose_league_subtitle">Não se preocupe, você poderá alterar depois.</string>
+    <string name="userstartpreferences_btn_next">Próximo</string>
+    <string name="userstartpreferences_btn_finish">Finalizar</string>
+    <string name="userstartpreferences_error_searching_leagues">Erro ao buscar as ligas.</string>
+    <string name="userstartpreferences_error_searching_countries">Erro ao buscar os países.</string>
+
+    <!--  Highlights  -->
+    <string name="highlights_news_image">Imagem da notícia</string>
+    <string name="highlights_news_error_searching_news">Erro ao buscar as notícias</string>
+    <string name="highlights_your_highlights">Seus Destaques</string>
+
+</resources>
