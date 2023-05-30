@@ -11,6 +11,13 @@
     <string name="matches_game_date">%s/%s</string>
     <string name="matches_game_hour">%s:%s</string>
     <string name="matches_title_games">Jogos</string>
+    <string name="matches_status_postponed">Adiada</string>
+    <string name="matches_status_finished">Finalizada</string>
+    <string name="matches_status_inprogress">Acontecendo agora</string>
+    <string name="matches_status_cancelled">Cancelada</string>
+    <string name="matches_status_abandoned">Abandonada</string>
+    <string name="matches_status_not_played">Não iniciada</string>
+    <string name="matches_status_to_be_confirmed">A confirmar</string>
 
     <!--  User Start Preferences  -->
     <string name="userstartpreferences_choose_country_title">Escolha o país do seu time</string>
@@ -27,4 +34,10 @@
     <string name="highlights_news_error_searching_news">Erro ao buscar as notícias</string>
     <string name="highlights_your_highlights">Seus Destaques</string>
 
+    <!--  Profile  -->
+    <string name="profile_title">Perfil</string>
+    <string name="profile_config_leagues">Gerenciar suas ligas favoritas</string>
+    <string name="profile_config_team">Gerenciar o time do coração</string>
+    <string name="profile_logout">Sair da conta</string>
+    <string name="profile_delete_account">Excluir conta</string>
 </resources>

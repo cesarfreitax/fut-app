@@ -32,7 +32,7 @@ fun AppCompatActivity.push(
 
 fun Fragment.push(fragmentDestination: Fragment, args: Bundle? = null) {
     val transaction = parentFragmentManager.beginTransaction()
-    transaction.addToBackStack("")
+    transaction.addToBackStack(null)
     args?.let {
         val bundle = Bundle(args)
         fragmentDestination.arguments = bundle

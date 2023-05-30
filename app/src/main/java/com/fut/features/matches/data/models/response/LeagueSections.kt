@@ -1,15 +1,12 @@
 package com.fut.features.matches.data.models.response
 
-import android.os.Parcelable
-import kotlinx.parcelize.Parcelize
+import java.io.Serializable
 
-@Parcelize
 class LeagueSections(
-    val leagues: ArrayList<LeagueFixtures>? = arrayListOf()
-) : Parcelable
+    var leagues: ArrayList<LeagueFixtures>? = arrayListOf()
+) : Serializable
 
-@Parcelize
 class LeagueFixtures(
     val name: String,
     val games: ArrayList<FixtureInfo>,
-) : Parcelable
+) : Serializable
