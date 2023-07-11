@@ -110,7 +110,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAlignment="center"
-                    android:text="Ops.. Parece que você não tem jogos hoje."
+                    android:text="@string/matches_no_games"
                     android:textSize="@dimen/textsize_medium"
                     android:textColor="@color/white" />
 
@@ -119,7 +119,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAlignment="center"
-                    android:text="Vá até o seu perfil e gerencie as suas ligas favoritas."
+                    android:text="@string/matches_no_games_subtitle"
                     android:textColor="@color/neutral1" />
 
             </LinearLayout>

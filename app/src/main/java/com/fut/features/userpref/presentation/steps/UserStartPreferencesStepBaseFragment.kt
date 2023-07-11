@@ -94,6 +94,8 @@ open class UserStartPreferencesStepBaseFragment : Fragment() {
     }
 
     private fun savePreferences() {
+        val selectedLeaguesId = ArrayList(viewModel.selectedLeagues).map {it.league.id }
+        val selectedLeaguesName = ArrayList(viewModel.selectedLeagues).map { it.league.name }
         val db = getSharedPreferences()?.edit()
         db?.apply {
             putString(Constants.SELECTED_COUNTRY_NAME, viewModel.selectedCountry)
@@ -101,11 +103,11 @@ open class UserStartPreferencesStepBaseFragment : Fragment() {
             putString(Constants.SELECTED_TEAM_ID, viewModel.selectedTeamId)
             putStringSet(
                 Constants.USER_PREF_SELECTED_LEAGUES_ID,
-                viewModel.selectedLeaguesId.map { it.toString() }.toMutableSet()
+                selectedLeaguesId.map { it.toString() }.toMutableSet()
             )
             putStringSet(
                 Constants.USER_PREF_SELECTED_LEAGUES_NAME,
-                viewModel.selectedLeaguesName.toMutableSet()
+                selectedLeaguesName.toMutableSet()
             )
         }?.apply()
     }

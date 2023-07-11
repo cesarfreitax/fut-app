@@ -7,6 +7,7 @@ import com.fut.core.utils.ResponseWrapper
 import com.fut.core.utils.ViewState
 import com.fut.features.search.domain.ISearchRepository
 import com.fut.features.userpref.domain.IUserPrefRepository
+import com.fut.features.userpref.domain.LeagueInfoEntity
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.onStart
@@ -21,8 +22,7 @@ class UserStartPreferencesViewModel @Inject constructor(
     var selectedCountry = ""
     var selectedTeamId = ""
     var selectedTeamName = ""
-    var selectedLeaguesName = arrayListOf<String>()
-    var selectedLeaguesId = arrayListOf<Int>()
+    val selectedLeagues = arrayListOf<LeagueInfoEntity>()
 
     fun getTeamsByCountry(country: String) = flow {
         when (val response = searchRepository.getTeamsByCountry(country)) {

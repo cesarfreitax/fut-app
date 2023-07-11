@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/dark_background"
     android:paddingHorizontal="16dp"
-    android:paddingVertical="16dp">
+    android:paddingTop="16dp">
     
     <androidx.cardview.widget.CardView
         android:id="@+id/cdv_src_container"
@@ -19,12 +19,34 @@
         app:cardCornerRadius="8dp"
         app:cardBackgroundColor="@color/white">
 
-        <androidx.appcompat.widget.SearchView
-            android:id="@+id/src_teams_or_leagues"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:queryBackground="@android:color/transparent"
-            app:iconifiedByDefault="false"/>
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/src_teams_or_leagues"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:queryBackground="@android:color/transparent"
+                app:iconifiedByDefault="false"/>
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/fbl_selected_leagues"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/src_teams_or_leagues"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:flexDirection="row"
+                app:flexWrap="wrap"
+                android:visibility="gone"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
     </androidx.cardview.widget.CardView>
 

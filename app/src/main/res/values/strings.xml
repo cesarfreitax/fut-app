@@ -18,6 +18,8 @@
     <string name="matches_status_abandoned">Abandonada</string>
     <string name="matches_status_not_played">Não iniciada</string>
     <string name="matches_status_to_be_confirmed">A confirmar</string>
+    <string name="matches_no_games">Nenhuma partida.</string>
+    <string name="matches_no_games_subtitle">Vá até o seu perfil e gerencie as suas ligas favoritas.</string>
 
     <!--  User Start Preferences  -->
     <string name="userstartpreferences_choose_country_title">Escolha o país do seu time</string>

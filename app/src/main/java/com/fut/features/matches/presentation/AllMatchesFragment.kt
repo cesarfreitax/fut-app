@@ -5,11 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.fut.core.utils.recyclerview.adapters.GenericSectionAdapter
 import com.fut.databinding.FragmentAllMatchesBinding
+import com.fut.features.main.MainActivity
 import com.fut.features.matches.data.models.response.LeagueFixtures
 import com.fut.features.matches.data.models.response.LeagueSections
 import com.fut.features.matches.presentation.cell.LeagueCell
@@ -138,4 +138,9 @@ class AllMatchesFragment : Fragment() {
                 return MatchCell(view)
             }
         }
+
+    override fun onStart() {
+        super.onStart()
+        (requireActivity() as MainActivity).bnvMenuVisibility = false
+    }
 }

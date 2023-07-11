@@ -1,6 +1,11 @@
 package com.fut.features.userpref.presentation.extension
 
+import android.view.LayoutInflater
+import android.widget.TextView
+import androidx.appcompat.widget.AppCompatImageView
 import androidx.recyclerview.widget.RecyclerView
+import com.fut.R
+import com.fut.core.utils.extensions.load
 import com.fut.databinding.LineCellBinding
 import com.fut.databinding.LineLeagueCellBinding
 import com.fut.databinding.LineTeamCellBinding
@@ -13,6 +18,7 @@ import com.fut.features.userpref.presentation.cell.LineLeagueCell
 import com.fut.features.userpref.presentation.cell.LineTeamCell
 import com.fut.features.userpref.presentation.steps.UserStartPreferencesStepBaseFragment
 import com.fut.features.userpref.presentation.steps.UserStartPreferencesStepEnum
+import com.fut.utils.extensions.toggleVisibility
 import com.google.android.flexbox.FlexDirection
 import com.google.android.flexbox.FlexboxLayoutManager
 import io.github.enicolas.genericadapter.AdapterHolderType
@@ -138,25 +144,59 @@ private fun UserStartPreferencesStepBaseFragment.didSelectCellHandler(cell: Any)
         }
         UserStartPreferencesStepEnum.CHOOSE_LEAGUE -> {
             val leagueInfo = (cell as LeagueInfoEntity)
-            val leagueName = leagueInfo.league.name
-            val leagueId = leagueInfo.league.id
-            if (contains(leagueId)) {
-                viewModel.selectedLeaguesId.remove(leagueId)
-                viewModel.selectedLeaguesName.remove(leagueName)
+
+            if (contains(leagueInfo)) {
+                viewModel.selectedLeagues.remove(leagueInfo)
             } else {
-                viewModel.selectedLeaguesName.add(leagueName)
-                viewModel.selectedLeaguesId.add(leagueId)
+                viewModel.selectedLeagues.add(leagueInfo)
             }
+
             setSelection(data)
             setSelection(response)
+            setupSelectedLeaguesContainer()
         }
     }
     binding.rcv.adapter?.notifyDataSetChanged()
 }
 
+private fun UserStartPreferencesStepBaseFragment.setupSelectedLeaguesContainer() {
+    binding.fblSelectedLeagues.removeAllViews()
+    val selectedLeagues = (response as MutableList<LeagueInfoEntity>).filter { it.isSelected == true }
+        selectedLeagues.forEach { selectedLeague ->
+            addSelectedLeagueViewToContainer(selectedLeague)
+        }
+    binding.fblSelectedLeagues.toggleVisibility(viewModel.selectedLeagues.isNotEmpty())
+}
+
+private fun UserStartPreferencesStepBaseFragment.addSelectedLeagueViewToContainer(
+    selectedLeague: LeagueInfoEntity
+) {
+    val view =
+        LayoutInflater.from(requireActivity()).inflate(R.layout.cell_selected_league, null)
+    val selectedLeagueImg = view.findViewById<AppCompatImageView>(R.id.img_selected_league)
+    selectedLeagueImg.load(selectedLeague.league.logo, requireActivity())
+    val selectedLeagueTxt = view.findViewById<TextView>(R.id.txt_selected_league)
+    selectedLeagueTxt.text = selectedLeague.league.name
+    binding.fblSelectedLeagues.addView(view)
+    onDiscardSelectedLeague(selectedLeagueTxt, selectedLeague)
+}
+
+private fun UserStartPreferencesStepBaseFragment.onDiscardSelectedLeague(
+    selectedLeagueTxt: TextView,
+    selectedLeague: LeagueInfoEntity
+) {
+    selectedLeagueTxt.setOnClickListener {
+        viewModel.selectedLeagues.remove(selectedLeague)
+        setSelection(data)
+        setSelection(response)
+        binding.rcv.adapter?.notifyDataSetChanged()
+        setupSelectedLeaguesContainer()
+    }
+}
+
 fun UserStartPreferencesStepBaseFragment.setSelection(list: MutableList<Any>) {
-    (list as MutableList<LeagueInfoEntity>).map {
-        it.isSelected = viewModel.selectedLeaguesId.contains(it.league.id)
+    (list as MutableList<LeagueInfoEntity>).map { league ->
+        league.isSelected = viewModel.selectedLeagues.contains(league)
     }
 }
 
@@ -164,5 +204,6 @@ fun UserStartPreferencesStepBaseFragment.checkButtonState(enable: Boolean) {
     (requireActivity() as UserStartPreferencesActivity).checkButtonState(enable)
 }
 
-fun UserStartPreferencesStepBaseFragment.contains(leagueId: Int): Boolean =
-    viewModel.selectedLeaguesId.contains(leagueId)
+fun UserStartPreferencesStepBaseFragment.contains(league: LeagueInfoEntity): Boolean {
+    return viewModel.selectedLeagues.map { it.league.id }.contains(league.league.id)
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="4dp"
+    app:cardBackgroundColor="@color/colorAccent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ctl_selected_league_cell"
+        android:layout_margin="6dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_selected_league"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/fluminense"/>
+
+        <TextView
+            android:id="@+id/txt_selected_league"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textsize_xxsmall"
+            tools:text="Libertadores"
+            app:layout_constraintStart_toEndOf="@id/img_selected_league"
+            app:layout_constraintTop_toTopOf="@id/img_selected_league"
+            app:layout_constraintBottom_toBottomOf="@id/img_selected_league"
+            android:layout_marginStart="4dp"
+            android:drawablePadding="4dp"
+            app:drawableTint="@color/black"
+            app:drawableEndCompat="@drawable/ic_close_18_white" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
+
